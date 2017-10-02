@@ -32,7 +32,7 @@ app.get("/speak/:animal", function(req, res){
 //Visit "/repeat/hello/3" repeat word that many times
 app.get("/repeat/:word/:num", function(req, res){
 	var word = req.params.word;
-	var num = req.params.num;
+	var num = Number(req.params.num);
 	var words = "";
 	for(var i=0; i < num; i++){
 		words += word + " ";
